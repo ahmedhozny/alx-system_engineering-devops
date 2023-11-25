@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script is for displaying the content of sub-directories
+
+for file in * ; do
+  printf "%s\n" "$file" | cut -d '-' -f2-
+done
