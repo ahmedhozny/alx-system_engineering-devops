@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-
+# This Bash script installs HAProxy, configures a frontend
+# and backend with two servers, enables HAProxy, tests the configuration,
+# and restarts the service.
 sudo apt-get -y update
 apt-get -y install haproxy
 
