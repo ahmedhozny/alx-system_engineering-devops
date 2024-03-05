@@ -5,9 +5,9 @@ import requests
 
 def top_ten(subreddit):
 	headers = {'User-Agent': 'AhmedHosny/1.0'}
-	url = f"http://www.reddit.com/r/{subreddit}/hot.json?sort=top&limit=9"
+	url = f"https://www.reddit.com/r/{subreddit}/hot.json?sort=top&limit=9"
 
-	response = requests.get(url, headers=headers)
+	response = requests.get(url, headers=headers, allow_redirects=False)
 	print(response.json())
 	if response.status_code != 200:
 		print(None)

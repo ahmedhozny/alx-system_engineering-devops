@@ -5,11 +5,11 @@ import requests
 
 def recurse(subreddit, hot_list=[], after=None):
 	headers = {'User-Agent': 'AhmedHosny/1.0'}
-	url = f"http://www.reddit.com/r/{subreddit}/hot.json"
+	url = f"https://www.reddit.com/r/{subreddit}/hot.json"
 
 	if after:
 		url += f'?after={after}'
-	response = requests.get(url, headers=headers)
+	response = requests.get(url, headers=headers, allow_redirects=False)
 	if response.status_code != 200:
 		return None
 
